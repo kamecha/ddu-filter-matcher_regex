@@ -7,11 +7,16 @@ import {
 type Params = Record<never, never>;
 
 export class Filter extends BaseFilter<Params> {
-  async filter(args: {
+  filter(args: {
     denops: Denops;
     input: string;
+    items: DduItem[];
   }): Promise<DduItem[]> {
-    return [];
+    const regex = new RegExp(args.input);
+    const items = args.items.filter((item: DduItem) => {
+      return regex.test(item.word);
+    });
+    return Promise.resolve(items);
   }
   params(): Params {
     return {};
