@@ -1,0 +1,54 @@
+*ddu-filter-matcher_regex.txt*	regex matcher for ddu.vim
+
+Author: kamecha
+License: MIT license
+
+CONTENTS				*ddu-filter-matcher_regex*
+
+Introduction		|ddu-filter-matcher_regex-introduction|
+Install			|ddu-filter-matcher_regex-install|
+Examples		|ddu-filter-matcher_regex-examples|
+Params			|ddu-filter-matcher_regex-params|
+
+
+==============================================================================
+INTRODUCTION			*ddu-filter-matcher_regex-introduction*
+
+This is WIP plugin.
+
+This matcher filters regex matched items.
+
+==============================================================================
+INSTALL				*ddu-filter-matcher_regex-install*
+
+Please install both "ddu.vim" and "denops.vim".
+
+https://github.com/Shougo/ddu.vim
+https://github.com/vim-denops/denops.vim
+
+
+==============================================================================
+EXAMPLES			*ddu-filter-matcher_regex-examples*
+
+>
+	call ddu#custom#patch_global(#{
+	    \   sourceOptions: #{
+	    \     _: #{
+	    \       matchers: ['matcher_regex'],
+	    \     },
+	    \   }
+	    \ })
+<
+
+==============================================================================
+PARAMS				*ddu-filter-matcher_regex-params*
+
+			*ddu-filter-matcher_regex-param-regex*
+regex (string)
+		This regex pattern is used to filter items.
+		NOTE: this regex engine is JavaScript RegExp.
+
+		Default: undefined
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:noet:
