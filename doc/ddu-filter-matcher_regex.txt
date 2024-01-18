@@ -46,6 +46,8 @@ PARAMS				*ddu-filter-matcher_regex-params*
 			*ddu-filter-matcher_regex-param-regex*
 regex (string)
 		This regex pattern is used to filter items.
+		NOTE: if this value is setted, user input filtering is not
+		used.
 		NOTE: this regex engine is JavaScript RegExp.
 
 		Default: undefined
